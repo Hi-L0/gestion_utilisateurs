@@ -1,0 +1,10 @@
+{
+    "HomeTitle":"Bienvenue dans cette application de test",
+    "ManageUsersTitle":"Gestion utilisateurs",
+    "buttonAddUser":"ajouter un utilisateur",
+    "table":{
+        "firstNameHeader":"Prenom",
+        "lastNameHeader":"Nom",
+        "emailHeader":"Addresse Email"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "HomeTitle":"Welcome to this test application",
+    "ManageUsersTitle":"Manage users",
+    "buttonAddUser":"add a user",
+    "table":{
+        "firstNameHeader":"First name",
+        "lastNameHeader":"Last name",
+        "emailHeader":"Email Address"
+    }
+}
