@@ -1,0 +1,56 @@
+<!-- <p>list works!</p>
+<p *ngFor="let item of data">
+    {{item.first_name}}
+    {{item.last_name}}
+</p> -->
+<div class="container">
+    <h3 class="my-2">
+        Manage users
+    </h3>
+    <div class="add-users-btn ">
+        <button class="btn btn-sm btn-success mt-4">
+           <i class="fa fa-plus" aria-hidden="true"></i> add a user
+        </button>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Avatar</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email address</th>
+            <th> - </th>
+        </tr>
+        <tr *ngFor="let user of data">
+            <td>{{user.id}}</td>
+            <td class="avatar"><img [src]="user.avatar" alt=""></td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td class="email"><a [href]="user.email">{{user.email}}</a></td>
+            <td class="actions">
+                Actions
+                <!-- <ng-select>
+
+                </ng-select> -->
+            </td>
+        </tr>
+    </table>
+
+    <nav aria-label="Page navigation example pagination ">
+        <ul class="pagination center">
+          <li class="page-item">
+            <button class="page-link" [ngClass]="{disabled:currentPage===1}" (click)="loadPreviousPage()" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </button>
+          </li>
+            <li *ngFor="let i of allPagesNumber()" class="page-item">
+                <button class="page-link" [ngClass]="{active:currentPage===i}" (click)="navigateTo(i)" >{{i}}</button>
+            </li>
+          <li class="page-item">
+            <button class="page-link" (click)="loadNextPage()" [ngClass]="{disabled:currentPage===totalpages}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+</div>
