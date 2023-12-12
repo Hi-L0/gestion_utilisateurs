@@ -1,4 +1,11 @@
 {
+    "header":{
+        "presentedBy":"Presenté par"
+    },
+    "menu":{
+        "home":"Home",
+        "gestionUsers":"Gestion utilisateur" 
+    },
     "HomeTitle":"Bienvenue dans cette application de test",
     "ManageUsersTitle":"Gestion utilisateurs",
     "buttonAddUser":"ajouter un utilisateur",
