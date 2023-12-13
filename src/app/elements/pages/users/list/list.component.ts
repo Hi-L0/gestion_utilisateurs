@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { UsersService } from 'src/app/services/users.service';
 import { UserType, UsersListType } from 'src/app/types/users.type';
@@ -8,6 +9,7 @@ import { UserType, UsersListType } from 'src/app/types/users.type';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
+
 export class ListComponent implements OnInit, OnDestroy{
 
   userSub!:Subscription;
@@ -16,6 +18,7 @@ export class ListComponent implements OnInit, OnDestroy{
   currentPage:number=1;
   totalpages!:number;
   pagination:number[]=[];
+  loading:boolean=true;
   constructor(private userService:UsersService ){}
   
   ngOnInit(): void {
@@ -27,6 +30,10 @@ export class ListComponent implements OnInit, OnDestroy{
       this.apiResponse=res;
       this.totalpages=res.total_pages;
       this.data=res.data;
+      this.loading=false;
+    },(error) => {
+      console.error('Error fetching data:', error);
+      this.loading = false; // Set loading to false if an error occurs
     })
   }
   allPagesNumber=():number[]=>{
@@ -54,7 +61,13 @@ export class ListComponent implements OnInit, OnDestroy{
       this.loadData();
     }
   }
+  deleteUser=(user:UserType)=>{
+    alert(
+      `you sure wanna delete this user!! well it's still in the making but here is your user's name ${user.first_name}`
+    );
+  }
   ngOnDestroy(): void {
     this.userSub.unsubscribe();
   }
+
 }

@@ -5,20 +5,22 @@
 </p> -->
 <div class="container">
     <h3 class="my-2">
-        Manage users
+        {{'ManageUsersTitle' | translate}}
     </h3>
     <div class="add-users-btn ">
-        <button class="btn btn-sm btn-success mt-4">
-           <i class="fa fa-plus" aria-hidden="true"></i> add a user
-        </button>
+        <a routerLink="/add">
+            <button class="btn btn-sm btn-success mt-4">
+               <i class="fa fa-plus" aria-hidden="true"></i> {{'buttonAddUser' | translate}}
+            </button>
+        </a>
     </div>
-    <table class="table table-striped">
+    <table *ngIf="!loading" class="table table-striped">
         <tr>
             <th>ID</th>
             <th>Avatar</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email address</th>
+            <th>{{'table.firstNameHeader' | translate}}</th>
+            <th>{{'table.lastNameHeader' | translate}}</th>
+            <th>{{'table.emailHeader' | translate}}</th>
             <th> - </th>
         </tr>
         <tr *ngFor="let user of data">
@@ -28,13 +30,40 @@
             <td>{{user.last_name}}</td>
             <td class="email"><a [href]="user.email">{{user.email}}</a></td>
             <td class="actions">
-                Actions
-                <!-- <ng-select>
-
-                </ng-select> -->
+                <!-- Actions -->
+                <!--  -->
+                <!-- <button class="btn btn-sm border mr-2">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    {{'actions.updateBtn' | translate}}
+                </button>
+                <button class="btn btn-sm border">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    {{'actions.deleteBtn'| translate}}
+                </button>
+             -->
+             <mat-form-field>
+                <mat-label>Actions</mat-label>
+                <mat-select class="selectAction">
+                  <mat-option>
+                    <button mat-icon-button class="actionsBtn ">
+                      <mat-icon>edit</mat-icon> {{'actions.updateBtn' | translate}}
+                    </button>
+                  </mat-option>
+                  <mat-option (click)="deleteUser(user)">
+                    <button mat-icon-button class="actionsBtn" >
+                      <mat-icon>delete</mat-icon> {{'actions.deleteBtn' | translate}}
+                    </button>
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
             </td>
         </tr>
     </table>
+    <div *ngIf="loading">
+        <h3 class="text-center">
+            no data is found
+        </h3>
+    </div>
 
     <nav aria-label="Page navigation example pagination ">
         <ul class="pagination center">

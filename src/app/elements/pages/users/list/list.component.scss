@@ -31,9 +31,46 @@ tr{
 .actions{
     width: 20%;
     text-align: left;
+    // height: 50px !important;
 }
 .pagination{
     margin: auto;
     display: flex;
     justify-content: center;
+}
+.custom{
+    border: none;
+}
+::ng-deep .mat-icon {
+    font-size: 16px; /* Change the font size to your preferred size */
+  }
+  
+  /* Reduce the size of the mat-button inside mat-option */
+//   ::ng-deep .mat-option button {
+//     font-size: 12px; /* Change the font size to your preferred size */
+//     min-height: 24px; /* Adjust the button's height as needed */
+//     padding: 4px 8px; /* Adjust the padding as needed */
+//   }
+.my-select-panel-class {
+    width: 50px; /* set the desired width */
+    max-width: 150px; /* set the desired max-width */
+    font-size: 12px; /* set the desired font size */
+  }
+
+.actionsBtn{
+    display: flex;
+    // gap: 10px;
+    font-size: 15px;
+    width: 100%;
+    i{
+        font-size: 15px;
+        padding: 4px;
+    }
+    &:hover{
+        background-color: white;
+    }      
+}
+.selectAction{
+    // background: white;
+    border: none;
 }
