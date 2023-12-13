@@ -1,7 +1,8 @@
 <div>
-  <app-header></app-header>
+  <app-header (selectedLanguage)="onLanguageSelect($event)"></app-header>
 </div>
-<div class="containr">  
+
+<div class="containr">
   <app-menu></app-menu>
   <router-outlet></router-outlet>
 </div>

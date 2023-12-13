@@ -13,6 +13,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http"
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { UsersModule } from './elements/pages/users/users.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatSelectModule} from "@angular/material/select"
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 export function HttpLoadFactory(http:HttpClient){
   return new TranslateHttpLoader(http);
@@ -42,6 +46,9 @@ export function HttpLoadFactory(http:HttpClient){
         deps:[HttpClient]
       }
     }),
+    BrowserAnimationsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
