@@ -7,7 +7,9 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">presented by Me </a>
+            <a class="nav-link" aria-current="page" >{{'header.presentedBy' | translate}} Hamza LAAROUSSI 
+                <!-- <span>HiL0</span>     -->
+            </a>
           </li>
            <!-- <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -16,15 +18,27 @@
             <a class="nav-link" href="#">Pricing</a>
           </li> -->
         </ul> 
-        <span class="navbar-text">
-            <select class="form-select bg-dark text-white">
-                <option value="en">
-                    english
-                </option>
-                <option value="fr">
-                    french
-                </option>
-            </select>
+        <!-- <button (click)="onSelect('fr')">
+            french
+        </button> -->
+        <span class="navbar-text mr-3">
+            <ng-select class="text-black background-dark"
+                    [items]="languages"
+                   bindLabel="name"
+                   [bindValue]="'name'"
+                   placeholder=""
+                   [clearable]="false"
+                   [(ngModel)]="languageSelected"
+                   (change)="onSelect($event)">
+                <ng-template ng-label-tmp let-item="item">
+                    <img height="25" width="25" [src]="item.flag"/>
+                    <b>{{item.name}}</b>
+                </ng-template>
+                <ng-template ng-option-tmp let-item="item" let-index="index">
+                    <img height="25" width="25" [src]="item.flag"/>
+                    <b>{{item.name}}</b>
+                </ng-template>
+            </ng-select>
         </span>
       </div>
     </div>
