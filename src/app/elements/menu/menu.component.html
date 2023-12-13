@@ -2,11 +2,11 @@
     <ul class="nav-items">
         <li [routerLinkActive]="'active'">
             <i class="fa fa-home" aria-hidden="true"></i>
-            <a class="nav-item" [routerLinkActive]="'nav-active'" routerLink="/home"> Home </a>
+            <a class="nav-item" [routerLinkActive]="'nav-active'" routerLink="/home"> {{'menu.home' | translate}} </a>
         </li>
         <li [routerLinkActive]="'active'">
             <i class="fa fa-users" aria-hidden="true"></i>
-            <a class="nav-item" [routerLinkActive]="'nav-active'" routerLink="/users">Manage users</a>
+            <a class="nav-item" [routerLinkActive]="'nav-active'" routerLink="/users">{{'menu.gestionUsers'| translate}}</a>
         </li>
     </ul>
 </div>
