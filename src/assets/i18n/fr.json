@@ -8,10 +8,15 @@
     },
     "HomeTitle":"Bienvenue dans cette application de test",
     "ManageUsersTitle":"Gestion utilisateurs",
+    "addUserPageTitle":"Ajouter un utilisateur",
     "buttonAddUser":"ajouter un utilisateur",
     "table":{
         "firstNameHeader":"Prenom",
         "lastNameHeader":"Nom",
         "emailHeader":"Addresse Email"
+    },
+    "actions":{
+        "deleteBtn":"supprimer",
+        "updateBtn":"mettre à jour"
     }
 }

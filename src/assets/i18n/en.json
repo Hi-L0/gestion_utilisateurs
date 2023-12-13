@@ -7,11 +7,16 @@
         "gestionUsers":"Manage users" 
     },
     "HomeTitle":"Welcome to this test application",
+    "addUserPageTitle":"Add user form",
     "ManageUsersTitle":"Manage users",
     "buttonAddUser":"add a user",
     "table":{
         "firstNameHeader":"First name",
         "lastNameHeader":"Last name",
         "emailHeader":"Email Address"
+    },
+    "actions":{
+        "deleteBtn":"delete",
+        "updateBtn":"update"
     }
 }
