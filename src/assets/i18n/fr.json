@@ -17,6 +17,6 @@
     },
     "actions":{
         "deleteBtn":"supprimer",
-        "updateBtn":"mettre à jour"
+        "updateBtn":"modifier"
     }
 }
