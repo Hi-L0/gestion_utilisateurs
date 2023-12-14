@@ -13,6 +13,7 @@
 tr{
     border-bottom: 1px solid #eee;
 }
+
 .avatar{
     img{
     width: 50px;
@@ -54,7 +55,7 @@ tr{
 .my-select-panel-class {
     width: 50px; /* set the desired width */
     max-width: 150px; /* set the desired max-width */
-    font-size: 12px; /* set the desired font size */
+    // font-size: 12px; /* set the desired font size */
   }
 
 .actionsBtn{
@@ -73,4 +74,8 @@ tr{
 .selectAction{
     // background: white;
     border: none;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0px 0 9px 0;
+    height: 16px;
 }
