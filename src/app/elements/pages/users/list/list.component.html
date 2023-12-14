@@ -60,12 +60,24 @@
         </tr>
     </table>
     <div *ngIf="loading">
-        <h3 class="text-center">
-            no data is found
-        </h3>
+      <table *ngIf="!loading" class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Avatar</th>
+            <th>{{'table.firstNameHeader' | translate}}</th>
+            <th>{{'table.lastNameHeader' | translate}}</th>
+            <th>{{'table.emailHeader' | translate}}</th>
+            <th> - </th>
+        </tr>
+        <tr>
+          <td colspan="6" class="text-center">
+              no data is found
+          </td>
+        </tr>
+        </table>
     </div>
 
-    <nav aria-label="Page navigation example pagination ">
+    <nav *ngIf="!loading" aria-label="Page navigation example pagination ">
         <ul class="pagination center">
           <li class="page-item">
             <button class="page-link" [ngClass]="{disabled:currentPage===1}" (click)="loadPreviousPage()" href="#" aria-label="Previous">
