@@ -13,7 +13,7 @@
     "table":{
         "firstNameHeader":"Prenom",
         "lastNameHeader":"Nom",
-        "emailHeader":"Addresse Email"
+        "emailHeader":"Adresse Email"
     },
     "actions":{
         "deleteBtn":"supprimer",
