@@ -31,6 +31,5 @@ export class HeaderComponent implements OnInit,OnDestroy{
   
 
   ngOnDestroy(): void {
-    this.languageSelected=''
   }
 }
